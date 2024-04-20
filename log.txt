@@ -1,0 +1,431 @@
+ЗАДАНИЕ 1
+
+- docker run busybox ping -i 7 netology.ru
+Вывод: 
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=4.158 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=3.397 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=3.538 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=3.669 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=3.775 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=3.539 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=3.502 ms
+64 bytes from 188.114.99.224: seq=7 ttl=63 time=3.561 ms
+64 bytes from 188.114.99.224: seq=8 ttl=63 time=3.813 ms
+64 bytes from 188.114.99.224: seq=9 ttl=63 time=3.753 ms
+64 bytes from 188.114.99.224: seq=10 ttl=63 time=3.662 ms
+64 bytes from 188.114.99.224: seq=11 ttl=63 time=3.639 ms
+64 bytes from 188.114.99.224: seq=12 ttl=63 time=3.904 ms
+
+- docker ps
+
+CONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS         PORTS     NAMES
+7637321beefc   busybox   "ping -i 7 netology.…"   4 hours ago   Up 6 minutes             pinger
+
+- docker start pinger
+	pinger(Вы docker отображается как запущенный.)
+- docker rename 7637321beefc1d8d0bdf0846763e73488583799e21135e05fc000b593d5786c8 pinger
+
+- docker logs pinger
+
+PING netology.ru (188.114.99.224): 56 data bytes
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=4.158 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=3.397 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=3.538 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=3.669 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=3.775 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=3.539 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=3.502 ms
+64 bytes from 188.114.99.224: seq=7 ttl=63 time=3.561 ms
+64 bytes from 188.114.99.224: seq=8 ttl=63 time=3.813 ms
+64 bytes from 188.114.99.224: seq=9 ttl=63 time=3.753 ms
+64 bytes from 188.114.99.224: seq=10 ttl=63 time=3.662 ms
+64 bytes from 188.114.99.224: seq=11 ttl=63 time=3.639 ms
+64 bytes from 188.114.99.224: seq=12 ttl=63 time=3.904 ms
+
+--- netology.ru ping statistics ---
+13 packets transmitted, 13 packets received, 0% packet loss
+round-trip min/avg/max = 3.397/3.685/4.158 ms
+PING netology.ru (188.114.98.224): 56 data bytes
+64 bytes from 188.114.98.224: seq=0 ttl=63 time=3.640 ms
+64 bytes from 188.114.98.224: seq=1 ttl=63 time=3.612 ms
+64 bytes from 188.114.98.224: seq=2 ttl=63 time=3.540 ms
+64 bytes from 188.114.98.224: seq=3 ttl=63 time=3.464 ms
+64 bytes from 188.114.98.224: seq=4 ttl=63 time=3.801 ms
+64 bytes from 188.114.98.224: seq=5 ttl=63 time=3.533 ms
+64 bytes from 188.114.98.224: seq=6 ttl=63 time=3.604 ms
+64 bytes from 188.114.98.224: seq=7 ttl=63 time=3.611 ms
+64 bytes from 188.114.98.224: seq=8 ttl=63 time=4.365 ms
+64 bytes from 188.114.98.224: seq=9 ttl=63 time=3.547 ms
+64 bytes from 188.114.98.224: seq=10 ttl=63 time=3.683 ms
+64 bytes from 188.114.98.224: seq=11 ttl=63 time=3.866 ms
+64 bytes from 188.114.98.224: seq=12 ttl=63 time=3.934 ms
+64 bytes from 188.114.98.224: seq=13 ttl=63 time=3.772 ms
+64 bytes from 188.114.98.224: seq=14 ttl=63 time=3.518 ms
+64 bytes from 188.114.98.224: seq=15 ttl=63 time=3.616 ms
+64 bytes from 188.114.98.224: seq=16 ttl=63 time=3.715 ms
+64 bytes from 188.114.98.224: seq=17 ttl=63 time=3.802 ms
+64 bytes from 188.114.98.224: seq=18 ttl=63 time=3.921 ms
+64 bytes from 188.114.98.224: seq=19 ttl=63 time=3.564 ms
+64 bytes from 188.114.98.224: seq=20 ttl=63 time=3.815 ms
+64 bytes from 188.114.98.224: seq=21 ttl=63 time=3.721 ms
+64 bytes from 188.114.98.224: seq=22 ttl=63 time=3.639 ms
+64 bytes from 188.114.98.224: seq=23 ttl=63 time=3.970 ms
+64 bytes from 188.114.98.224: seq=24 ttl=63 time=3.920 ms
+64 bytes from 188.114.98.224: seq=25 ttl=63 time=3.740 ms
+64 bytes from 188.114.98.224: seq=26 ttl=63 time=3.764 ms
+64 bytes from 188.114.98.224: seq=27 ttl=63 time=3.574 ms
+64 bytes from 188.114.98.224: seq=28 ttl=63 time=3.748 ms
+64 bytes from 188.114.98.224: seq=29 ttl=63 time=3.840 ms
+64 bytes from 188.114.98.224: seq=30 ttl=63 time=3.560 ms
+64 bytes from 188.114.98.224: seq=31 ttl=63 time=3.893 ms
+64 bytes from 188.114.98.224: seq=32 ttl=63 time=3.721 ms
+64 bytes from 188.114.98.224: seq=33 ttl=63 time=3.953 ms
+64 bytes from 188.114.98.224: seq=34 ttl=63 time=3.596 ms
+64 bytes from 188.114.98.224: seq=35 ttl=63 time=3.833 ms
+64 bytes from 188.114.98.224: seq=36 ttl=63 time=3.673 ms
+64 bytes from 188.114.98.224: seq=37 ttl=63 time=3.749 ms
+64 bytes from 188.114.98.224: seq=38 ttl=63 time=3.886 ms
+64 bytes from 188.114.98.224: seq=39 ttl=63 time=3.646 ms
+64 bytes from 188.114.98.224: seq=40 ttl=63 time=3.674 ms
+64 bytes from 188.114.98.224: seq=41 ttl=63 time=3.710 ms
+64 bytes from 188.114.98.224: seq=42 ttl=63 time=3.712 ms
+64 bytes from 188.114.98.224: seq=43 ttl=63 time=3.620 ms
+64 bytes from 188.114.98.224: seq=44 ttl=63 time=4.022 ms
+64 bytes from 188.114.98.224: seq=45 ttl=63 time=4.022 ms
+64 bytes from 188.114.98.224: seq=46 ttl=63 time=3.699 ms
+64 bytes from 188.114.98.224: seq=47 ttl=63 time=3.686 ms
+64 bytes from 188.114.98.224: seq=48 ttl=63 time=3.882 ms
+64 bytes from 188.114.98.224: seq=49 ttl=63 time=3.919 ms
+64 bytes from 188.114.98.224: seq=50 ttl=63 time=3.611 ms
+64 bytes from 188.114.98.224: seq=51 ttl=63 time=3.702 ms
+64 bytes from 188.114.98.224: seq=52 ttl=63 time=3.604 ms
+64 bytes from 188.114.98.224: seq=53 ttl=63 time=3.665 ms
+64 bytes from 188.114.98.224: seq=54 ttl=63 time=3.455 ms
+64 bytes from 188.114.98.224: seq=55 ttl=63 time=3.508 ms
+64 bytes from 188.114.98.224: seq=56 ttl=63 time=3.780 ms
+64 bytes from 188.114.98.224: seq=57 ttl=63 time=3.887 ms
+64 bytes from 188.114.98.224: seq=58 ttl=63 time=3.656 ms
+64 bytes from 188.114.98.224: seq=59 ttl=63 time=3.631 ms
+64 bytes from 188.114.98.224: seq=60 ttl=63 time=3.689 ms
+64 bytes from 188.114.98.224: seq=61 ttl=63 time=3.583 ms
+64 bytes from 188.114.98.224: seq=62 ttl=63 time=3.720 ms
+64 bytes from 188.114.98.224: seq=63 ttl=63 time=3.554 ms
+64 bytes from 188.114.98.224: seq=64 ttl=63 time=3.572 ms
+64 bytes from 188.114.98.224: seq=65 ttl=63 time=3.727 ms
+64 bytes from 188.114.98.224: seq=66 ttl=63 time=3.664 ms
+64 bytes from 188.114.98.224: seq=67 ttl=63 time=3.815 ms
+PING netology.ru (188.114.99.224): 56 data bytes
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=4.665 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=3.615 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=3.630 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=3.659 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=4.359 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=3.681 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=3.658 ms
+64 bytes from 188.114.99.224: seq=7 ttl=63 time=3.742 ms
+64 bytes from 188.114.99.224: seq=8 ttl=63 time=3.642 ms
+64 bytes from 188.114.99.224: seq=9 ttl=63 time=3.619 ms
+64 bytes from 188.114.99.224: seq=10 ttl=63 time=3.827 ms
+64 bytes from 188.114.99.224: seq=11 ttl=63 time=5.644 ms
+64 bytes from 188.114.99.224: seq=12 ttl=63 time=4.081 ms
+64 bytes from 188.114.99.224: seq=13 ttl=63 time=3.767 ms
+64 bytes from 188.114.99.224: seq=14 ttl=63 time=3.581 ms
+64 bytes from 188.114.99.224: seq=15 ttl=63 time=3.587 ms
+64 bytes from 188.114.99.224: seq=16 ttl=63 time=3.577 ms
+64 bytes from 188.114.99.224: seq=17 ttl=63 time=3.700 ms
+64 bytes from 188.114.99.224: seq=18 ttl=63 time=3.755 ms
+64 bytes from 188.114.99.224: seq=19 ttl=63 time=3.560 ms
+64 bytes from 188.114.99.224: seq=20 ttl=63 time=3.636 ms
+64 bytes from 188.114.99.224: seq=21 ttl=63 time=3.749 ms
+64 bytes from 188.114.99.224: seq=22 ttl=63 time=3.657 ms
+64 bytes from 188.114.99.224: seq=23 ttl=63 time=3.608 ms
+64 bytes from 188.114.99.224: seq=24 ttl=63 time=3.961 ms
+64 bytes from 188.114.99.224: seq=25 ttl=63 time=3.604 ms
+64 bytes from 188.114.99.224: seq=26 ttl=63 time=3.489 ms
+64 bytes from 188.114.99.224: seq=27 ttl=63 time=4.019 ms
+64 bytes from 188.114.99.224: seq=28 ttl=63 time=5.356 ms
+64 bytes from 188.114.99.224: seq=29 ttl=63 time=3.557 ms
+64 bytes from 188.114.99.224: seq=30 ttl=63 time=3.994 ms
+64 bytes from 188.114.99.224: seq=31 ttl=63 time=3.930 ms
+64 bytes from 188.114.99.224: seq=32 ttl=63 time=3.798 ms
+64 bytes from 188.114.99.224: seq=33 ttl=63 time=3.637 ms
+64 bytes from 188.114.99.224: seq=34 ttl=63 time=3.641 ms
+64 bytes from 188.114.99.224: seq=35 ttl=63 time=3.739 ms
+64 bytes from 188.114.99.224: seq=36 ttl=63 time=3.637 ms
+64 bytes from 188.114.99.224: seq=37 ttl=63 time=3.628 ms
+64 bytes from 188.114.99.224: seq=38 ttl=63 time=3.761 ms
+64 bytes from 188.114.99.224: seq=39 ttl=63 time=3.895 ms
+64 bytes from 188.114.99.224: seq=40 ttl=63 time=3.831 ms
+64 bytes from 188.114.99.224: seq=41 ttl=63 time=3.808 ms
+64 bytes from 188.114.99.224: seq=42 ttl=63 time=3.593 ms
+64 bytes from 188.114.99.224: seq=43 ttl=63 time=3.657 ms
+64 bytes from 188.114.99.224: seq=44 ttl=63 time=3.594 ms
+64 bytes from 188.114.99.224: seq=45 ttl=63 time=3.843 ms
+64 bytes from 188.114.99.224: seq=46 ttl=63 time=3.651 ms
+64 bytes from 188.114.99.224: seq=47 ttl=63 time=4.279 ms
+64 bytes from 188.114.99.224: seq=48 ttl=63 time=3.529 ms
+64 bytes from 188.114.99.224: seq=49 ttl=63 time=3.758 ms
+64 bytes from 188.114.99.224: seq=50 ttl=63 time=3.782 ms
+64 bytes from 188.114.99.224: seq=51 ttl=63 time=3.714 ms
+64 bytes from 188.114.99.224: seq=52 ttl=63 time=3.624 ms
+64 bytes from 188.114.99.224: seq=53 ttl=63 time=3.568 ms
+64 bytes from 188.114.99.224: seq=54 ttl=63 time=3.375 ms
+64 bytes from 188.114.99.224: seq=55 ttl=63 time=3.699 ms
+64 bytes from 188.114.99.224: seq=56 ttl=63 time=3.814 ms
+64 bytes from 188.114.99.224: seq=57 ttl=63 time=3.752 ms
+64 bytes from 188.114.99.224: seq=58 ttl=63 time=3.782 ms
+64 bytes from 188.114.99.224: seq=59 ttl=63 time=3.751 ms
+64 bytes from 188.114.99.224: seq=60 ttl=63 time=4.040 ms
+64 bytes from 188.114.99.224: seq=61 ttl=63 time=3.726 ms
+64 bytes from 188.114.99.224: seq=62 ttl=63 time=3.763 ms
+64 bytes from 188.114.99.224: seq=63 ttl=63 time=3.944 ms
+64 bytes from 188.114.99.224: seq=64 ttl=63 time=3.672 ms
+64 bytes from 188.114.99.224: seq=65 ttl=63 time=3.524 ms
+64 bytes from 188.114.99.224: seq=66 ttl=63 time=3.548 ms
+64 bytes from 188.114.99.224: seq=67 ttl=63 time=3.672 ms
+64 bytes from 188.114.99.224: seq=68 ttl=63 time=4.148 ms
+64 bytes from 188.114.99.224: seq=69 ttl=63 time=3.698 ms
+64 bytes from 188.114.99.224: seq=70 ttl=63 time=3.740 ms
+64 bytes from 188.114.99.224: seq=71 ttl=63 time=3.675 ms
+64 bytes from 188.114.99.224: seq=72 ttl=63 time=4.208 ms
+64 bytes from 188.114.99.224: seq=73 ttl=63 time=3.721 ms
+64 bytes from 188.114.99.224: seq=74 ttl=63 time=3.859 ms
+64 bytes from 188.114.99.224: seq=75 ttl=63 time=3.721 ms
+64 bytes from 188.114.99.224: seq=76 ttl=63 time=3.773 ms
+64 bytes from 188.114.99.224: seq=77 ttl=63 time=3.570 ms
+64 bytes from 188.114.99.224: seq=78 ttl=63 time=3.635 ms
+64 bytes from 188.114.99.224: seq=79 ttl=63 time=4.023 ms
+64 bytes from 188.114.99.224: seq=80 ttl=63 time=3.525 ms
+64 bytes from 188.114.99.224: seq=81 ttl=63 time=3.563 ms
+64 bytes from 188.114.99.224: seq=82 ttl=63 time=3.724 ms
+64 bytes from 188.114.99.224: seq=83 ttl=63 time=3.777 ms
+64 bytes from 188.114.99.224: seq=84 ttl=63 time=3.625 ms
+64 bytes from 188.114.99.224: seq=85 ttl=63 time=3.662 ms
+64 bytes from 188.114.99.224: seq=86 ttl=63 time=3.750 ms
+64 bytes from 188.114.99.224: seq=87 ttl=63 time=3.876 ms
+64 bytes from 188.114.99.224: seq=88 ttl=63 time=3.742 ms
+64 bytes from 188.114.99.224: seq=89 ttl=63 time=3.720 ms
+64 bytes from 188.114.99.224: seq=90 ttl=63 time=3.740 ms
+64 bytes from 188.114.99.224: seq=91 ttl=63 time=3.629 ms
+64 bytes from 188.114.99.224: seq=92 ttl=63 time=3.561 ms
+64 bytes from 188.114.99.224: seq=93 ttl=63 time=3.502 ms
+64 bytes from 188.114.99.224: seq=94 ttl=63 time=4.059 ms
+64 bytes from 188.114.99.224: seq=95 ttl=63 time=3.700 ms
+64 bytes from 188.114.99.224: seq=96 ttl=63 time=3.610 ms
+64 bytes from 188.114.99.224: seq=97 ttl=63 time=3.753 ms
+64 bytes from 188.114.99.224: seq=98 ttl=63 time=3.673 ms
+64 bytes from 188.114.99.224: seq=99 ttl=63 time=3.667 ms
+64 bytes from 188.114.99.224: seq=100 ttl=63 time=3.782 ms
+64 bytes from 188.114.99.224: seq=101 ttl=63 time=3.494 ms
+64 bytes from 188.114.99.224: seq=102 ttl=63 time=3.508 ms
+64 bytes from 188.114.99.224: seq=103 ttl=63 time=3.615 ms
+64 bytes from 188.114.99.224: seq=104 ttl=63 time=5.466 ms
+64 bytes from 188.114.99.224: seq=105 ttl=63 time=3.560 ms
+64 bytes from 188.114.99.224: seq=106 ttl=63 time=3.599 ms
+64 bytes from 188.114.99.224: seq=107 ttl=63 time=3.612 ms
+64 bytes from 188.114.99.224: seq=108 ttl=63 time=3.523 ms
+64 bytes from 188.114.99.224: seq=109 ttl=63 time=3.661 ms
+64 bytes from 188.114.99.224: seq=110 ttl=63 time=3.583 ms
+64 bytes from 188.114.99.224: seq=111 ttl=63 time=3.549 ms
+64 bytes from 188.114.99.224: seq=112 ttl=63 time=3.843 ms
+64 bytes from 188.114.99.224: seq=113 ttl=63 time=3.743 ms
+64 bytes from 188.114.99.224: seq=114 ttl=63 time=3.625 ms
+64 bytes from 188.114.99.224: seq=115 ttl=63 time=3.659 ms
+64 bytes from 188.114.99.224: seq=116 ttl=63 time=3.789 ms
+64 bytes from 188.114.99.224: seq=117 ttl=63 time=3.648 ms
+64 bytes from 188.114.99.224: seq=118 ttl=63 time=3.716 ms
+64 bytes from 188.114.99.224: seq=119 ttl=63 time=3.626 ms
+64 bytes from 188.114.99.224: seq=120 ttl=63 time=3.686 ms
+64 bytes from 188.114.99.224: seq=121 ttl=63 time=3.863 ms
+64 bytes from 188.114.99.224: seq=122 ttl=63 time=3.817 ms
+64 bytes from 188.114.99.224: seq=123 ttl=63 time=3.899 ms
+64 bytes from 188.114.99.224: seq=124 ttl=63 time=3.542 ms
+64 bytes from 188.114.99.224: seq=125 ttl=63 time=3.826 ms
+64 bytes from 188.114.99.224: seq=126 ttl=63 time=3.708 ms
+64 bytes from 188.114.99.224: seq=127 ttl=63 time=3.827 ms
+64 bytes from 188.114.99.224: seq=128 ttl=63 time=3.610 ms
+64 bytes from 188.114.99.224: seq=129 ttl=63 time=3.741 ms
+64 bytes from 188.114.99.224: seq=130 ttl=63 time=3.726 ms
+64 bytes from 188.114.99.224: seq=131 ttl=63 time=3.706 ms
+64 bytes from 188.114.99.224: seq=132 ttl=63 time=3.643 ms
+64 bytes from 188.114.99.224: seq=133 ttl=63 time=3.725 ms
+64 bytes from 188.114.99.224: seq=134 ttl=63 time=3.585 ms
+64 bytes from 188.114.99.224: seq=135 ttl=63 time=3.603 ms
+64 bytes from 188.114.99.224: seq=136 ttl=63 time=4.116 ms
+64 bytes from 188.114.99.224: seq=137 ttl=63 time=3.631 ms
+64 bytes from 188.114.99.224: seq=138 ttl=63 time=3.664 ms
+64 bytes from 188.114.99.224: seq=139 ttl=63 time=3.609 ms
+64 bytes from 188.114.99.224: seq=140 ttl=63 time=3.604 ms
+64 bytes from 188.114.99.224: seq=141 ttl=63 time=3.524 ms
+64 bytes from 188.114.99.224: seq=142 ttl=63 time=3.566 ms
+64 bytes from 188.114.99.224: seq=143 ttl=63 time=3.751 ms
+64 bytes from 188.114.99.224: seq=144 ttl=63 time=3.745 ms
+64 bytes from 188.114.99.224: seq=145 ttl=63 time=3.877 ms
+64 bytes from 188.114.99.224: seq=146 ttl=63 time=3.652 ms
+64 bytes from 188.114.99.224: seq=147 ttl=63 time=3.789 ms
+64 bytes from 188.114.99.224: seq=148 ttl=63 time=3.781 ms
+64 bytes from 188.114.99.224: seq=149 ttl=63 time=3.657 ms
+64 bytes from 188.114.99.224: seq=150 ttl=63 time=3.879 ms
+64 bytes from 188.114.99.224: seq=151 ttl=63 time=3.807 ms
+64 bytes from 188.114.99.224: seq=152 ttl=63 time=3.497 ms
+64 bytes from 188.114.99.224: seq=153 ttl=63 time=3.809 ms
+64 bytes from 188.114.99.224: seq=154 ttl=63 time=3.871 ms
+64 bytes from 188.114.99.224: seq=155 ttl=63 time=3.912 ms
+64 bytes from 188.114.99.224: seq=156 ttl=63 time=3.739 ms
+64 bytes from 188.114.99.224: seq=157 ttl=63 time=3.525 ms
+64 bytes from 188.114.99.224: seq=158 ttl=63 time=3.730 ms
+64 bytes from 188.114.99.224: seq=159 ttl=63 time=3.548 ms
+64 bytes from 188.114.99.224: seq=160 ttl=63 time=3.595 ms
+64 bytes from 188.114.99.224: seq=161 ttl=63 time=3.648 ms
+64 bytes from 188.114.99.224: seq=162 ttl=63 time=3.449 ms
+64 bytes from 188.114.99.224: seq=163 ttl=63 time=3.461 ms
+64 bytes from 188.114.99.224: seq=164 ttl=63 time=3.688 ms
+64 bytes from 188.114.99.224: seq=165 ttl=63 time=3.759 ms
+64 bytes from 188.114.99.224: seq=166 ttl=63 time=3.744 ms
+64 bytes from 188.114.99.224: seq=167 ttl=63 time=3.781 ms
+64 bytes from 188.114.99.224: seq=168 ttl=63 time=3.707 ms
+64 bytes from 188.114.99.224: seq=169 ttl=63 time=3.727 ms
+64 bytes from 188.114.99.224: seq=170 ttl=63 time=3.873 ms
+64 bytes from 188.114.99.224: seq=171 ttl=63 time=3.661 ms
+64 bytes from 188.114.99.224: seq=172 ttl=63 time=3.617 ms
+64 bytes from 188.114.99.224: seq=173 ttl=63 time=4.804 ms
+64 bytes from 188.114.99.224: seq=174 ttl=63 time=3.943 ms
+64 bytes from 188.114.99.224: seq=175 ttl=63 time=3.560 ms
+64 bytes from 188.114.99.224: seq=176 ttl=63 time=3.674 ms
+64 bytes from 188.114.99.224: seq=177 ttl=63 time=3.763 ms
+64 bytes from 188.114.99.224: seq=178 ttl=63 time=3.725 ms
+64 bytes from 188.114.99.224: seq=179 ttl=63 time=3.676 ms
+64 bytes from 188.114.99.224: seq=180 ttl=63 time=3.652 ms
+64 bytes from 188.114.99.224: seq=181 ttl=63 time=4.518 ms
+
+- docker stop pinger
+pinger
+
+- docker rm pinger
+pinger(удален)
+
+- docker rmi busybox
+Untagged: busybox:latest
+Untagged: busybox@sha256:c3839dd800b9eb7603340509769c43e146a74c63dca3045a8e7dc8ee07e53966
+Deleted: sha256:ba5dc23f65d4cc4a4535bce55cf9e63b068eb02946e3422d3587e8ce803b6aab
+Deleted: sha256:95c4a60383f7b6eb6f7b8e153a07cd6e896de0476763bef39d0f6cf3400624bd
+
+ЗАДАНИЕ 2
+
+Загрузите образ node версии 15.14
+
+- docker pull node:15.14
+
+15.14: Pulling from library/node
+bfde2ec33fbc: Pull complete
+787f5e2f1047: Pull complete
+7b6173a10eb8: Pull complete
+dc05be471d51: Pull complete
+55fab5cadd3c: Pull complete
+bd821d20ef8c: Pull complete
+6041b69671c6: Pull complete
+989c5d2d2313: Pull complete
+4b57d41e8391: Pull complete
+Digest: sha256:608bba799613b1ebf754034ae008849ba51e88b23271412427b76d60ae0d0627
+Status: Downloaded newer image for node:15.14
+docker.io/library/node:15.14
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview node:15.14
+
+	Запустите контейнер node в интерактивном режиме подключения терминала, поименуйте его mynode, передайте две переменные среды NAME=<ваше имя> и SURNAME=<ваша фамилия>
+
+	docker run --name mynode -i -t 3d3f41722daf1a77c34d6eade6676bbffa2d6a2a21095de2ab0c427a5c942fc9
+	Welcome to Node.js v15.14.0.
+	Type ".help" for more information.	
+	NAME='kirill'
+	'kirill'
+	SURNAME='popov'
+	'popov'
+
+В интерактивной среде выполнения node выполните скрипт, который выведет на экран приветсвтие: Привет, <ваше имя> <ваша фамилия>!, эти данные должны быть получены из переменных среды
+
+`Hi, ${NAME} ${SURNAME}`
+'Hi, kirill popov'
+
+Остановите контейнер
+
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+
+Удалите образ node версии 15.14
+
+docker rm mynode
+mynode
+
+docker rmi node:15.14
+Untagged: node:15.14
+Untagged: node@sha256:608bba799613b1ebf754034ae008849ba51e88b23271412427b76d60ae0d0627
+Deleted: sha256:3d3f41722daf1a77c34d6eade6676bbffa2d6a2a21095de2ab0c427a5c942fc9
+Deleted: sha256:601382991a159cfc5013ad973158f30b7b7a913e8d7e547b3456deab3ad98022
+Deleted: sha256:d5db49eecae8c02c9ea3a79f89c43ded9162bac118a0302a7b514d0df82aa112
+Deleted: sha256:a2c1973858d0aad3de0927294602b17c8ef9050c30e0f461e0868997a08552a4
+Deleted: sha256:a0153172017a08a521a8be971ca4dcb5fbc4b7227642c12bbb2da6265bd66b50
+Deleted: sha256:f1123940e954d335d91b52a40fab4f8144f38ff113ade7d65663071d0f06da6f
+Deleted: sha256:f1f4fbb0e7e6e0ce2d9eae1e577f9f6df0a719dd874bff00b2d08895c75c297d
+Deleted: sha256:1eb455ab6d45fdbbd90fccff791ffa228080c052acf464f8da1b1d78650bd706
+Deleted: sha256:1dbe832a694971a925d7d216f49b700c95f402bd72288f9d37eceb1d59dcf72d
+Deleted: sha256:2f4ee6a2e1b5dfb9236cd262e788f9d39109242ca27a4aacb583c8af66ec3ff7
+
+Задание 3 - Volumes
+
+Загрузите образ node версии 15.14
+
+docker pull node:15.14
+
+Запустите контейнер с именем first_node из образа node версии 15.14 в фоновом режиме, подключив папку data из текущей директории в /var/first/data контейнера
+
+docker run -d -v ./var/first/data node:15.14  sleep inf
+ab5afc6ef0b09b797e98e67952b796c591d793de111ccb06db2fdd7a54762aa8
+docker rename festive_rosalind first_node
+
+docker run -d -v ./var/second/data node:15.14  sleep inf
+206bd7c817af8ebd0047ad4c26f51a5385e3ccc871354c1e7febb4ba6466311a
+docker rename quizzical_brown second_node
+
+Подключитесь к контейнеру first_node с помощью exec и создайте текстовый файл любого содержания в /var/first/data
+
+docker exec -d first_node touch /var/first/data/my_firsfile
+docker exec -d first_node touch /var/first/data/my_firsfile.txt
+
+Добавьте еще один файл в папку data на хостовой машине
+
+docker exec -it second_node ls /var/second/data
+my_firsfile  my_firsfile.txt
+
+docker exec -it first_node ls /var/first/data  
+my_firsfile  my_firsfile.txt
+
+Остановите оба контейнера
+
+docker stop first_node
+first_node
+docker stop second_node
+second_node
+
+Удалите оба контейнера
+
+docker rm first_node
+first_node
+docker rm second_node
+second_node
+
+Удалите образ node версии 15.14
+
+docker rmi node:15.14
+Untagged: node:15.14
+Untagged: node@sha256:608bba799613b1ebf754034ae008849ba51e88b23271412427b76d60ae0d0627
+Deleted: sha256:3d3f41722daf1a77c34d6eade6676bbffa2d6a2a21095de2ab0c427a5c942fc9
+Deleted: sha256:601382991a159cfc5013ad973158f30b7b7a913e8d7e547b3456deab3ad98022
+Deleted: sha256:d5db49eecae8c02c9ea3a79f89c43ded9162bac118a0302a7b514d0df82aa112
+Deleted: sha256:a2c1973858d0aad3de0927294602b17c8ef9050c30e0f461e0868997a08552a4
+Deleted: sha256:a0153172017a08a521a8be971ca4dcb5fbc4b7227642c12bbb2da6265bd66b50
+Deleted: sha256:f1123940e954d335d91b52a40fab4f8144f38ff113ade7d65663071d0f06da6f
+Deleted: sha256:f1f4fbb0e7e6e0ce2d9eae1e577f9f6df0a719dd874bff00b2d08895c75c297d
+Deleted: sha256:1eb455ab6d45fdbbd90fccff791ffa228080c052acf464f8da1b1d78650bd706
+Deleted: sha256:1dbe832a694971a925d7d216f49b700c95f402bd72288f9d37eceb1d59dcf72d
+Deleted: sha256:2f4ee6a2e1b5dfb9236cd262e788f9d39109242ca27a4aacb583c8af66ec3ff7
