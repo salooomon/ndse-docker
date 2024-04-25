@@ -338,14 +338,14 @@ What's Next?
 	docker run --name mynode -i -t 3d3f41722daf1a77c34d6eade6676bbffa2d6a2a21095de2ab0c427a5c942fc9
 	Welcome to Node.js v15.14.0.
 	Type ".help" for more information.	
-	NAME='kirill'
+	process.env.NAME='kirill'
 	'kirill'
-	SURNAME='popov'
+	process.env.SURNAME='popov'
 	'popov'
 
 В интерактивной среде выполнения node выполните скрипт, который выведет на экран приветсвтие: Привет, <ваше имя> <ваша фамилия>!, эти данные должны быть получены из переменных среды
 
-`Hi, ${NAME} ${SURNAME}`
+`Hi, ${process.env.NAME} ${process.env.SURNAME}`
 'Hi, kirill popov'
 
 Остановите контейнер
